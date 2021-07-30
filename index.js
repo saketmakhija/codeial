@@ -4,6 +4,9 @@ const app = express();
 
 app.use('/', require('./routes'));
 
+app.set('view engine', 'ejs');
+app.set('views', './views');
+
 const port = 8000;
 
 app.listen(port, function(err){
