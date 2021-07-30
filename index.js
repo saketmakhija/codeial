@@ -1,7 +1,8 @@
 const express = require('express');
-
+const port = 8000;
 const app = express();
 const ejsLayouts = require('express-ejs-layouts');
+const db = require('./config/mongoose');
 
 
 app.use(express.static('./assets'));
@@ -15,7 +16,7 @@ app.use('/', require('./routes'));
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
-const port = 8000;
+
 
 app.listen(port, function(err){
     if(err){
