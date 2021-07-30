@@ -1,6 +1,14 @@
 const express = require('express');
 
 const app = express();
+const ejsLayouts = require('express-ejs-layouts');
+
+
+app.use(express.static('./assets'));
+
+app.use(ejsLayouts);
+app.set('layout extractStyles', true);
+app.set('layout extractScripts', true);
 
 app.use('/', require('./routes'));
 
