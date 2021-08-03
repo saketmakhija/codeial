@@ -5,4 +5,7 @@ const usersController = require('../controllers/users_controller');
 router.get('/profile', usersController.profile);
 router.get('/signup', usersController.signup);
 router.get('/signin', usersController.signin);
+
+router.post('/create-user', usersController.createUser);
+router.post('/create-session', usersController.createUserSession);
 module.exports = router;
