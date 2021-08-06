@@ -8,7 +8,7 @@ console.log("route is running");
 route.get('/', homeController.home);
 
 route.use('/users', require('./users'));
-route.use('/detail', require('./details'));
+route.use('/posts', require('./posts'));
 
 module.exports = route;
 
