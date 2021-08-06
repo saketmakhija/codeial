@@ -9,6 +9,7 @@ route.get('/', homeController.home);
 
 route.use('/users', require('./users'));
 route.use('/posts', require('./posts'));
+route.use('/comments', require('./comments'));
 
 module.exports = route;
 
