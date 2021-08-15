@@ -52,11 +52,13 @@ module.exports.createUser = function(req, res){
 }
 
 module.exports.createUserSession = function(req, res){
+    req.flash('success', 'you are logged in!');
     return res.redirect('/');
 }
 
 module.exports.signout = function(req, res){
     req.logout();
+    req.flash('success', 'you are logged out!');
     return res.redirect('/');
 
 }
